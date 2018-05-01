@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="anchorPane" prefHeight="749.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFinalFx.gragh.Test1BarController">
+   <children>
+      <BarChart fx:id="barChart" layoutX="1.0" layoutY="16.0" prefHeight="639.0" prefWidth="861.0" style="-fx-background-color: #ffffff;" title="Detail data">
+        <xAxis>
+          <CategoryAxis label="Name" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="" label="Score" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Button fx:id="clear" layoutX="94.0" layoutY="671.0" mnemonicParsing="false" onAction="#clear" prefHeight="35.0" prefWidth="77.0" style="-fx-background-color: #003399#003399;" text="clear" textFill="WHITE" />
+      <Button fx:id="gragh" layoutX="396.0" layoutY="672.0" mnemonicParsing="false" onAction="#gragh" prefHeight="36.0" prefWidth="85.0" style="-fx-background-color: #003399#003399;" text="gragh" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></Button>
+      <ComboBox fx:id="comboBox" layoutX="226.0" layoutY="672.0" prefHeight="35.0" prefWidth="150.0" promptText="Option" style="-fx-background-color: #6699ff;">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="test1" />
+                  <String fx:value="test2" />
+                  <String fx:value="test3" />
+                  <String fx:value="test4" />
+                  <String fx:value="test5" />
+                  <String fx:value="test6" />
+                  <String fx:value="test7" />
+                  <String fx:value="test8" />
+                  <String fx:value="test9" />
+                  <String fx:value="test10" />
+              </FXCollections>
+          </items>
+      </ComboBox>
+   </children>
+
+
+</AnchorPane>

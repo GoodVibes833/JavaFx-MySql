@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="779.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFinalFx.mainScreen.mainScreen">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="229.0" layoutY="74.0" prefHeight="38.0" prefWidth="463.0" text="CICCC Student Management Tools" textFill="#003399">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <VBox layoutX="183.0" layoutY="123.0" prefHeight="298.0" prefWidth="451.0">
+         <children>
+            <Button fx:id="btnOverView" mnemonicParsing="false" onAction="#goToOverview" prefHeight="150.0" prefWidth="550.0" style="-fx-background-color: #003399#003399;" text="OVERVIEW" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnPersonalInfo" mnemonicParsing="false" onAction="#goToPersonalInfo" prefHeight="150.0" prefWidth="550.0" style="-fx-background-color: #003399#003399;" text="STUDENTS PERSONAL INFORMATION" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnTestResults" mnemonicParsing="false" onAction="#goToTestresult" prefHeight="150.0" prefWidth="550.0" style="-fx-background-color: #003399#003399;" text="STUDENTS TEST MARK AND RESULTS" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <ImageView fitHeight="61.0" fitWidth="305.0" layoutX="256.0" layoutY="14.0">
+         <image>
+            <Image url="@logo.jpg" />
+         </image>
+      </ImageView>
+        <!--<Button fx:id="btnSalary" layoutX="479.0" layoutY="385.0" mnemonicParsing="false" onAction="#gotoGragh" prefHeight="27.0" prefWidth="119.0" text="SALARY GRAGH" />-->
+    </children>
+</AnchorPane>

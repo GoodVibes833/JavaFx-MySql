@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="799.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFinalFx.forInstructor.ForInstructor">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TableView fx:id="tableUser" layoutX="17.0" layoutY="53.0" prefHeight="208.0" prefWidth="759.0">
+        <columns>
+          <TableColumn fx:id="columnId" prefWidth="58.0" text="ID" />
+            <TableColumn fx:id="columnFirst" prefWidth="58.0" text="First" />
+            <TableColumn fx:id="columnTest1" prefWidth="58.0" text="Test1" />
+            <TableColumn fx:id="columnTest2" minWidth="0.0" prefWidth="58.0" text="Test2" />
+            <TableColumn fx:id="columnTest3" minWidth="0.0" prefWidth="58.0" text="Test3" />
+            <TableColumn fx:id="columnTest4" minWidth="0.0" prefWidth="58.0" text="Test4" />
+            <TableColumn fx:id="columnTest5" minWidth="0.0" prefWidth="58.0" text="Test5" />
+            <TableColumn fx:id="columnTest6" minWidth="0.0" prefWidth="58.0" text="Test6" />
+            <TableColumn fx:id="columnTest7" minWidth="0.0" prefWidth="58.0" text="Test7" />
+            <TableColumn fx:id="columnTest8" minWidth="0.0" prefWidth="58.0" text="Test8" />
+            <TableColumn fx:id="columnTest9" minWidth="0.0" prefWidth="58.0" text="Test9" />
+            <TableColumn fx:id="columnTest10" minWidth="0.0" prefWidth="58.0" text="Test10" />
+            <TableColumn fx:id="columnAve" prefWidth="58.0" text="Ave" />
+        </columns>
+      </TableView>
+      <Label layoutX="312.0" layoutY="14.0" prefHeight="27.0" prefWidth="204.0" text="Student Test results" textFill="#003399">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnMartAdd" layoutX="27.0" layoutY="381.0" mnemonicParsing="false" onAction="#saveDataFromDatabase" prefHeight="27.0" prefWidth="142.0" style="-fx-background-color: #003399;" text="MARK and ADD" textFill="WHITE" />
+      <Button fx:id="btnDelete" layoutX="526.0" layoutY="381.0" mnemonicParsing="false" onAction="#deleteDataFromDatabase" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: #003399;" text="DELETE" textFill="WHITE" />
+      <Button fx:id="btnUpdate" layoutX="177.0" layoutY="381.0" mnemonicParsing="false" onAction="#updateDataFromDatabase" prefHeight="27.0" prefWidth="142.0" style="-fx-background-color: #003399;" text="MARK and UPDATE" textFill="WHITE" />
+      <VBox layoutX="17.0" layoutY="284.0" prefHeight="78.0" prefWidth="759.0">
+         <children>
+            <Text fill="#003399" strokeType="OUTSIDE" strokeWidth="0.0" text="Instruction">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#003399" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Locate a student's answer file @ .../.../userinfo" wrappingWidth="667.34033203125" />
+            <Text fill="#003399" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Click MARK and button" wrappingWidth="480.34033203125" />
+            <Text fill="#003399" strokeType="OUTSIDE" strokeWidth="0.0" text="2.1. If a student is already exist, Click MARK and UPDATE button" wrappingWidth="478.34033203125" />
+         </children>
+      </VBox>
+      <TextField fx:id="textFieldId" layoutX="465.0" layoutY="381.0" prefHeight="27.0" prefWidth="48.0" />
+      <Text fill="#003399" layoutX="441.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>
