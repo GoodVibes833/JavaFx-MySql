@@ -38,6 +38,6 @@
          </font>
       </Label>
       <Button fx:id="gragh" layoutX="425.0" layoutY="606.0" mnemonicParsing="false" onAction="#gotoSalaryGragh" prefHeight="27.0" prefWidth="102.0" style="-fx-background-color: #003399;" text="draw gragh" textFill="WHITE" />
-      <Button fx:id="btnLoad1" layoutX="602.0" layoutY="602.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="121.0" style="-fx-background-color: #003399;" text="Send email" textFill="WHITE" />
+      <Button fx:id="btnLoad1" layoutX="602.0" layoutY="602.0" mnemonicParsing="false" onAction="#resultToTextFile" prefHeight="27.0" prefWidth="121.0" style="-fx-background-color: #003399;" text="Export" textFill="WHITE" />
     </children>
 </AnchorPane>

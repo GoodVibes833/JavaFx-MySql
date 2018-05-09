@@ -47,7 +47,7 @@
       </VBox>
       <ImageView fitHeight="61.0" fitWidth="305.0" layoutX="256.0" layoutY="14.0">
          <image>
-            <Image url="@logo.jpg" />
+            <Image url="@../mainScreen/logo.jpg" />
          </image>
       </ImageView>
         <!--<Button fx:id="btnSalary" layoutX="479.0" layoutY="385.0" mnemonicParsing="false" onAction="#gotoGragh" prefHeight="27.0" prefWidth="119.0" text="SALARY GRAGH" />-->

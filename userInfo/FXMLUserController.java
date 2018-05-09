@@ -248,11 +248,6 @@ public class FXMLUserController implements Initializable {
 
     }
 
-    @FXML
-    public void exportToTextFile(ActionEvent event){
-
-    }
-
 
     public void gotoSalaryGragh(ActionEvent event) throws IOException {
 
@@ -262,7 +257,7 @@ public class FXMLUserController implements Initializable {
 //        if(combo.getValue().equals("Age")){
             System.out.println("value is age");
              stage = new Stage();
-             myPane = FXMLLoader.load(getClass().getResource("../gragh/barChart.fxml"));
+             myPane = FXMLLoader.load(getClass().getResource("../../charts/barChart.fxml"));
              scene = new Scene(myPane);
             stage.setScene(scene);
             stage.show();

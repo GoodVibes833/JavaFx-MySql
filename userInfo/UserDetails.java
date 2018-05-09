@@ -37,6 +37,7 @@ public class UserDetails {
     }
 
 
+
     public void setHobby(String hobby) {
         this.hobby.set(hobby);
     }

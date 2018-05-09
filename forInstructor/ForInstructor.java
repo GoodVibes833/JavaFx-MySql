@@ -101,7 +101,7 @@ public class ForInstructor implements Initializable{
     Statement stmt = null;
     ActionEvent event;
 
-
+    int score ;
     int studentId;
     String studentName;
     String testName;
@@ -145,7 +145,6 @@ public class ForInstructor implements Initializable{
     }
 
 
-    int score ;
     public int mark(){
         int numOfRightAnswer=0;
 
@@ -194,7 +193,6 @@ public class ForInstructor implements Initializable{
 
 
     }
-
 
     @FXML
     private void loadDataFromDatabase(ActionEvent event) {

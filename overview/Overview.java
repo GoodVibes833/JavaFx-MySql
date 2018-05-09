@@ -14,18 +14,21 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import JavaFinalFx.DbConnection;
-import JavaFinalFx.userInfo.UserDetails;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Arrays;
-import java.util.ResourceBundle;
+import java.util.*;
+import java.util.Formatter;
 
-public class Overview implements Initializable {
+
+public class Overview implements Initializable  {
     @FXML
     private TableView<AllDetails> tableUser;
 
@@ -89,8 +92,8 @@ public class Overview implements Initializable {
     Connection conn = null;
     Statement stmt = null;
     ActionEvent event;
-
     public ComboBox combo;
+    private static Formatter out;
 
 
     //todo JOIN!!
@@ -157,14 +160,41 @@ public class Overview implements Initializable {
 
             System.out.println("value is age");
             stage = new Stage();
-            myPane = FXMLLoader.load(getClass().getResource("../gragh/Test1BarChart.fxml"));
+            myPane = FXMLLoader.load(getClass().getResource("../Model/Test1BarChart.fxml"));
             scene = new Scene(myPane);
             stage.setScene(scene);
             stage.show();
 
 
+    }
+
+
+    public void resultToTextFile(ActionEvent event) {
+
+        try {
+            out = new Formatter("/Users/jin-tak.han/IdeaProjects/JavaFxFinal/src/JavaFinalFx/overview/result.txt"); // open the file
+
+
+            String resultArr = "id first last age hobby email birthday t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 average\n";
+            for(int i =0; i<data.size(); i++){
+               resultArr +=  data.get(i) + "\n";
+            }
+            out.format(resultArr);
+
+            out.close();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.exit(1); // terminate the program
+        } catch (FormatterClosedException e) {
+                System.err.println("Error writing to file. Terminating...");
+            }
+
 
     }
+
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -173,56 +203,3 @@ public class Overview implements Initializable {
     }
 }
 
-
-//
-//	mysql> SELECT * FROM author;
-//            +----+--------+---------------------------+
-//            | id | name   | profile                   |
-//            +----+--------+---------------------------+
-//            |  1 | egoing | developer                 |
-//            |  2 | duru   | database administrator    |
-//            |  3 | taeho  | data scientist, developer |
-//            +----+--------+---------------------------+
-//
-////데이터2
-//            CREATE TABLE topic13(
-//            id INT(11) NOT NULL AUTO_INCREMENT,
-//            title VARCHAR(100) NOT NULL,
-//            description TEXT,
-//            created DATETIME NOT NULL,
-//            author_id VARCHAR(30) DEFAULT NULL,
-//            PRIMARY KEY(id));
-//
-//            INSERT INTO `topic13` VALUES (1,'MySQL','MySQL is...','2018-01-01 12:10:11',1);
-//            INSERT INTO `topic13` VALUES (2,'Oracle','Oracle is ...','2018-01-03 13:01:10',1);
-//            INSERT INTO `topic13` VALUES (3,'SQL Server','SQL Server is ...','2018-01-20 11:01:10',2);
-//            INSERT INTO `topic13` VALUES (4,'PostgreSQL','PostgreSQL is ...','2018-01-23 01:03:03',3);
-//            INSERT INTO `topic13` VALUES (5,'MongoDB','MongoDB is ...','2018-01-30 12:31:03',1);
-//
-//            mysql> SELECT * FROM topic13;
-//            +----+------------+-------------------+---------------------+-----------+
-//            | id | title      | description       | created             | author_id |
-//            +----+------------+-------------------+---------------------+-----------+
-//            |  1 | MySQL      | MySQL is...       | 2018-01-01 12:10:11 | 1         |
-//            |  2 | Oracle     | Oracle is ...     | 2018-01-03 13:01:10 | 1         |
-//            |  3 | SQL Server | SQL Server is ... | 2018-01-20 11:01:10 | 2         |
-//            |  4 | PostgreSQL | PostgreSQL is ... | 2018-01-23 01:03:03 | 3         |
-//            |  5 | MongoDB    | MongoDB is ...    | 2018-01-30 12:31:03 | 1         |
-//            +----+------------+-------------------+---------------------+-----------+
-//            5 rows in set (0.00 sec)
-//
-//
-//
-//// JOIN  **
-//
-//            mysql> SELECT * FROM topic13 LEFT JOIN author ON topic13.author_id=author.id;
-//            +----+------------+-------------------+---------------------+-----------+------+--------+---------------------------+
-//            | id | title      | description       | created             | author_id | id   | name   | profile                   |
-//            +----+------------+-------------------+---------------------+-----------+------+--------+---------------------------+
-//            |  1 | MySQL      | MySQL is...       | 2018-01-01 12:10:11 | 1         |    1 | egoing | developer                 |
-//            |  2 | Oracle     | Oracle is ...     | 2018-01-03 13:01:10 | 1         |    1 | egoing | developer                 |
-//            |  5 | MongoDB    | MongoDB is ...    | 2018-01-30 12:31:03 | 1         |    1 | egoing | developer                 |
-//            |  3 | SQL Server | SQL Server is ... | 2018-01-20 11:01:10 | 2         |    2 | duru   | database administrator    |
-//            |  4 | PostgreSQL | PostgreSQL is ... | 2018-01-23 01:03:03 | 3         |    3 | taeho  | data scientist, developer |
-//            +----+------------+-------------------+---------------------+-----------+------+--------+---------------------------+
-//            5 rows in set (0.00 sec)

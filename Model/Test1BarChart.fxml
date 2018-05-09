@@ -10,7 +10,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="anchorPane" prefHeight="749.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFinalFx.gragh.Test1BarController">
+<AnchorPane id="anchorPane" prefHeight="749.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFinalFx.overview.Test1BarController">
    <children>
       <BarChart fx:id="barChart" layoutX="1.0" layoutY="16.0" prefHeight="639.0" prefWidth="861.0" style="-fx-background-color: #ffffff;" title="Detail data">
         <xAxis>

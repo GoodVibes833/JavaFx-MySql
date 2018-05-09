@@ -20,6 +20,7 @@ public class DbConnection {
     public Connection Connect() {
         try {
             //Your database url string,ensure it is correct
+
             String url = "jdbc:mysql://localhost:3306/cmscfinal?verifyServerCertificate=false&useSSL=true";
             String user = "root";
             String password = "0000";

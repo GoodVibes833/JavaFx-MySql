@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 
 
@@ -36,11 +37,12 @@ public class Main extends Application {
     @Override
     public void start(Stage window) throws IOException {
 //        root1= FXMLLoader.load(getClass().getResource("userInfo/mainScreen.fxml"));
-        root1= FXMLLoader.load(getClass().getResource("mainScreen/mainScreen.fxml"));
+        root1= FXMLLoader.load(getClass().getResource("Model/mainScreen.fxml"));
         scene1 = new Scene(root1);
         window.setTitle("wow");
         window.setScene(scene1);
         window.show();
+
 
     }
 }

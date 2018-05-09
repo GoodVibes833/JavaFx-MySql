@@ -36,12 +36,11 @@ public class mainScreen implements Initializable{
         Pane myPane;
         Scene scene;
         stage = new Stage();
-        myPane = FXMLLoader.load(getClass().getResource("../overview/OverView.fxml"));
+        myPane = FXMLLoader.load(getClass().getResource("../Model/Overview.fxml"));
         scene = new Scene(myPane);
         stage.setScene(scene);
         stage.show();
     }
-
 
     public void goToPersonalInfo(ActionEvent event) throws IOException {
 
@@ -49,7 +48,7 @@ public class mainScreen implements Initializable{
         Pane myPane;
         Scene scene;
         stage = new Stage();
-        myPane = FXMLLoader.load(getClass().getResource("../userInfo/FXMLUser.fxml"));
+        myPane = FXMLLoader.load(getClass().getResource("../Model/FXMLUser.fxml"));
         scene = new Scene(myPane);
         stage.setScene(scene);
         stage.show();
@@ -61,13 +60,11 @@ public class mainScreen implements Initializable{
         Pane myPane;
         Scene scene;
         stage = new Stage();
-        myPane = FXMLLoader.load(getClass().getResource("../forInstructor/ForInstructors.fxml"));
+        myPane = FXMLLoader.load(getClass().getResource("../Model/ForInstructors.fxml"));
         scene = new Scene(myPane);
         stage.setScene(scene);
         stage.show();
         }
-
-
 
 
 

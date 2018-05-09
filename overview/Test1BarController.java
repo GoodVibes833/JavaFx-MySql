@@ -1,4 +1,4 @@
-package JavaFinalFx.gragh;
+package JavaFinalFx.overview;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
