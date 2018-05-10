@@ -5,4 +5,4 @@ id first last age hobby email birthday t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 average
 4 Monica Park 30 yoga mmonnicca@gmail.com 406 60 70 80 80 80 80 0 0 0 0 0
 5 Rachel Green 31 shopping Rachel@gmail.com 416 50 60 60 60 60 60 0 0 0 0 0
 6 Ross Geller 29 studying Ross@gmail.com 1231 80 90 90 90 100 100 0 0 0 0 0
-7 alexx asd 123 qwe qwe 1112 90 0 0 0 0 0 0 0 0 0 0
+7 Ichiro Lee 44 Baseball japan@gmail. 1215 70 70 60 0 0 0 0 0 0 0 0
