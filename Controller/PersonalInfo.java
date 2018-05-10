@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package JavaFinalFx.userInfo;
+package JavaFinalFx.Controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -14,6 +14,7 @@ import java.sql.Statement;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 
+import JavaFinalFx.Model.UserDetails;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -26,13 +27,13 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import JavaFinalFx.DbConnection;
+import JavaFinalFx.Util.DbConnection;
 
 /**
  *
  * @author admin
  */
-public class FXMLUserController implements Initializable {
+public class PersonalInfo implements Initializable {
 
     @FXML
     private TextField textId;
@@ -254,14 +255,11 @@ public class FXMLUserController implements Initializable {
         Stage stage;
         Pane myPane;
         Scene scene;
-//        if(combo.getValue().equals("Age")){
-            System.out.println("value is age");
              stage = new Stage();
              myPane = FXMLLoader.load(getClass().getResource("../../charts/barChart.fxml"));
              scene = new Scene(myPane);
             stage.setScene(scene);
             stage.show();
-//            }
 }
 
 

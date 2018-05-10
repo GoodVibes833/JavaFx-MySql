@@ -1,4 +1,4 @@
-package JavaFinalFx.overview;
+package JavaFinalFx.Model;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;

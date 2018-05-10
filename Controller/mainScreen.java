@@ -1,4 +1,4 @@
-package JavaFinalFx.mainScreen;
+package JavaFinalFx.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -36,7 +36,7 @@ public class mainScreen implements Initializable{
         Pane myPane;
         Scene scene;
         stage = new Stage();
-        myPane = FXMLLoader.load(getClass().getResource("../Model/Overview.fxml"));
+        myPane = FXMLLoader.load(getClass().getResource("../View/Overview.fxml"));
         scene = new Scene(myPane);
         stage.setScene(scene);
         stage.show();
@@ -48,7 +48,7 @@ public class mainScreen implements Initializable{
         Pane myPane;
         Scene scene;
         stage = new Stage();
-        myPane = FXMLLoader.load(getClass().getResource("../Model/FXMLUser.fxml"));
+        myPane = FXMLLoader.load(getClass().getResource("../View/FXMLUser.fxml"));
         scene = new Scene(myPane);
         stage.setScene(scene);
         stage.show();
@@ -60,14 +60,11 @@ public class mainScreen implements Initializable{
         Pane myPane;
         Scene scene;
         stage = new Stage();
-        myPane = FXMLLoader.load(getClass().getResource("../Model/ForInstructors.fxml"));
+        myPane = FXMLLoader.load(getClass().getResource("../View/ForInstructors.fxml"));
         scene = new Scene(myPane);
         stage.setScene(scene);
         stage.show();
         }
-
-
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

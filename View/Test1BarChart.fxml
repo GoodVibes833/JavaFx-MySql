@@ -10,9 +10,9 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="anchorPane" prefHeight="749.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFinalFx.overview.Test1BarController">
+<AnchorPane id="anchorPane" prefHeight="749.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFinalFx.Controller.BarController">
    <children>
-      <BarChart fx:id="barChart" layoutX="1.0" layoutY="16.0" prefHeight="639.0" prefWidth="861.0" style="-fx-background-color: #ffffff;" title="Detail data">
+      <BarChart fx:id="barChart" layoutX="1.0" layoutY="20.0" prefHeight="639.0" prefWidth="861.0" style="-fx-background-color: #ffffff;" title="Detail data">
         <xAxis>
           <CategoryAxis label="Name" side="BOTTOM" />
         </xAxis>
@@ -20,12 +20,12 @@
           <NumberAxis fx:id="" label="Score" side="LEFT" />
         </yAxis>
       </BarChart>
-      <Button fx:id="clear" layoutX="94.0" layoutY="671.0" mnemonicParsing="false" onAction="#clear" prefHeight="35.0" prefWidth="77.0" style="-fx-background-color: #003399#003399;" text="clear" textFill="WHITE" />
-      <Button fx:id="gragh" layoutX="396.0" layoutY="672.0" mnemonicParsing="false" onAction="#gragh" prefHeight="36.0" prefWidth="85.0" style="-fx-background-color: #003399#003399;" text="gragh" textFill="WHITE">
+      <Button fx:id="clear" layoutX="94.0" layoutY="671.0" mnemonicParsing="false" onAction="#clear" prefHeight="51.0" prefWidth="101.0" style="-fx-background-color: #003399#003399;" text="clear" textFill="WHITE" />
+      <Button fx:id="gragh" layoutX="429.0" layoutY="675.0" mnemonicParsing="false" onAction="#gragh" prefHeight="47.0" prefWidth="111.0" style="-fx-background-color: #003399#003399;" text="gragh" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor></Button>
-      <ComboBox fx:id="comboBox" layoutX="226.0" layoutY="672.0" prefHeight="35.0" prefWidth="150.0" promptText="Option" style="-fx-background-color: #6699ff;">
+      <ComboBox fx:id="comboBox" layoutX="226.0" layoutY="673.0" prefHeight="49.0" prefWidth="174.0" promptText="Option" style="-fx-background-color: #6699ff;">
           <items>
               <FXCollections fx:factory="observableArrayList">
                   <String fx:value="test1" />

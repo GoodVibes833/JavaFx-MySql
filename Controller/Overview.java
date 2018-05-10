@@ -1,5 +1,6 @@
-package JavaFinalFx.overview;
+package JavaFinalFx.Controller;
 
+import JavaFinalFx.Model.AllDetails;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,12 +14,10 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import JavaFinalFx.DbConnection;
+import JavaFinalFx.Util.DbConnection;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -96,9 +95,6 @@ public class Overview implements Initializable  {
     private static Formatter out;
 
 
-    //todo JOIN!!
-
-
     @FXML
     private void loadDataFromDatabase(ActionEvent event) {
         try {
@@ -152,15 +148,20 @@ public class Overview implements Initializable  {
 
     }
 
-
-    public void gotoSalaryGragh(ActionEvent event) throws IOException {
+    /**
+     * draw gragh
+     * @param event
+     * @throws IOException
+     */
+    @FXML
+    public void gotoGragh(ActionEvent event) throws IOException {
         Stage stage;
         Pane myPane;
         Scene scene;
 
             System.out.println("value is age");
             stage = new Stage();
-            myPane = FXMLLoader.load(getClass().getResource("../Model/Test1BarChart.fxml"));
+            myPane = FXMLLoader.load(getClass().getResource("../View/Test1BarChart.fxml"));
             scene = new Scene(myPane);
             stage.setScene(scene);
             stage.show();
@@ -168,11 +169,15 @@ public class Overview implements Initializable  {
 
     }
 
-
+    /**
+     * export to txt file
+     * @param event
+     */
+    @FXML
     public void resultToTextFile(ActionEvent event) {
 
         try {
-            out = new Formatter("/Users/jin-tak.han/IdeaProjects/JavaFxFinal/src/JavaFinalFx/overview/result.txt"); // open the file
+            out = new Formatter("/Users/jin-tak.han/IdeaProjects/JavaFxFinal/src/JavaFinalFx/Util/result.txt"); // open the file
 
 
             String resultArr = "id first last age hobby email birthday t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 average\n";
@@ -192,8 +197,6 @@ public class Overview implements Initializable  {
 
 
     }
-
-
 
 
     @Override

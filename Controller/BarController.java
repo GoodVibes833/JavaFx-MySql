@@ -1,6 +1,6 @@
-package JavaFinalFx.overview;
+package JavaFinalFx.Controller;
 
-import javafx.collections.FXCollections;
+import JavaFinalFx.Model.AllDetails;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,20 +11,19 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.cell.PropertyValueFactory;
-import JavaFinalFx.DbConnection;
-import JavaFinalFx.overview.AllDetails;
-import JavaFinalFx.userInfo.UserDetails;
+import JavaFinalFx.Util.DbConnection;
 
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.ResourceBundle;
 
-public class Test1BarController implements Initializable {
+/**
+ * Draw bar chart
+ */
+public class BarController implements Initializable {
 
 
     @FXML
@@ -72,10 +71,16 @@ public class Test1BarController implements Initializable {
 
 }
 
+    /**
+     * delete all gragh info
+     */
     public void clear(){
         barChart.getData().clear();
     }
 
+    /**
+     * draw gragh
+     */
     public void gragh(){
         clear();
         try {

@@ -1,12 +1,10 @@
 // This class acts as a model class,holding getters,setters and properties
-package JavaFinalFx.userInfo;
+package JavaFinalFx.Model;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.css.SimpleStyleableIntegerProperty;
-import javafx.css.SimpleStyleableStringProperty;
 
 /**
  *

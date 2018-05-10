@@ -9,10 +9,10 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="779.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFinalFx.mainScreen.mainScreen">
+<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="779.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFinalFx.Controller.mainScreen">
     <children>
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <Label layoutX="229.0" layoutY="74.0" prefHeight="38.0" prefWidth="463.0" text="CICCC Student Management Tools" textFill="#003399">
+      <Label layoutX="256.0" layoutY="74.0" prefHeight="38.0" prefWidth="463.0" text="CICCC Student Management Tools" textFill="#003399">
          <font>
             <Font size="18.0" />
          </font>
@@ -45,9 +45,9 @@
             </Button>
          </children>
       </VBox>
-      <ImageView fitHeight="61.0" fitWidth="305.0" layoutX="256.0" layoutY="14.0">
+      <ImageView fitHeight="61.0" fitWidth="305.0" layoutX="251.0" layoutY="15.0">
          <image>
-            <Image url="@../mainScreen/logo.jpg" />
+            <Image url="@../Model/logo.jpg" />
          </image>
       </ImageView>
         <!--<Button fx:id="btnSalary" layoutX="479.0" layoutY="385.0" mnemonicParsing="false" onAction="#gotoGragh" prefHeight="27.0" prefWidth="119.0" text="SALARY GRAGH" />-->

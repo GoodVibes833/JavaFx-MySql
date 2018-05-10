@@ -1,5 +1,6 @@
-package JavaFinalFx.forInstructor;
+package JavaFinalFx.Controller;
 
+import JavaFinalFx.Model.ScoreDetails;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -7,7 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import JavaFinalFx.DbConnection;
+import JavaFinalFx.Util.DbConnection;
 
 import java.io.File;
 import java.net.URL;
@@ -20,7 +21,10 @@ import java.util.Arrays;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
-public class ForInstructor implements Initializable{
+/**
+ * mark scores, add, and update
+ */
+public class MarkScore implements Initializable{
     @FXML
     private Label label;
 
@@ -70,9 +74,6 @@ public class ForInstructor implements Initializable{
     private TextField textFieldId;
 
     @FXML
-    private Button btnLoad;
-
-    @FXML
     private Button btnMartAdd;
 
     @FXML
@@ -81,52 +82,34 @@ public class ForInstructor implements Initializable{
     @FXML
     private Button btnUpdate;
 
-    @FXML
-    private ComboBox<?> combo;
 
-    @FXML
-    private Button btnAge;
 
     static ArrayList<String> arrStudentAnswer = new ArrayList<>();
     static ArrayList<String> arrRightAnswer = new ArrayList<>();
-
     private Scanner studentAnswer;
     private Scanner rightAnswer;
-
-
-
     private ObservableList<ScoreDetails> scoredata;
     private DbConnection dc;
     Connection conn = null;
     Statement stmt = null;
     ActionEvent event;
-
     int score ;
     int studentId;
     String studentName;
     String testName;
 
-    int test1 = 0;
-    int test2 = 0;
-    int test3 = 0;
-    int test4 = 0;
-    int test5 = 0;
-    int test6 = 0;
-    int test7 = 0;
-    int test8 = 0;
-    int test9 = 0;
-    int test10 = 0;
-    int ave = 0;
 
-
-
+    /**
+     * read text file
+     * @return student answer with array
+     */
     public ArrayList<String> readfile(){
         arrRightAnswer.clear();
         arrStudentAnswer.clear();
 
         try{
-            studentAnswer = new Scanner(new File("./src/JavaFinalFx/forInstructor/studentAnswer.txt"));
-            rightAnswer = new Scanner(new File("./src/JavaFinalFx/forInstructor/rightAnswer.txt"));
+            studentAnswer = new Scanner(new File("./src/JavaFinalFx/Util/studentAnswer.txt"));
+            rightAnswer = new Scanner(new File("./src/JavaFinalFx/Util/rightAnswer.txt"));
         }
         catch (Exception e){
             System.out.println("no file");
@@ -144,7 +127,10 @@ public class ForInstructor implements Initializable{
     return arrStudentAnswer;
     }
 
-
+    /**
+     * mark student's score
+     * @return score
+     */
     public int mark(){
         int numOfRightAnswer=0;
 
@@ -166,6 +152,7 @@ public class ForInstructor implements Initializable{
 
     }
 
+
     public int getStudentId(){
         readfile();
         studentId = Integer.parseInt(arrStudentAnswer.get(1));
@@ -183,15 +170,6 @@ public class ForInstructor implements Initializable{
         readfile();
         testName = arrStudentAnswer.get(5);
         return testName;
-    }
-
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        dc = new DbConnection();
-        loadDataFromDatabase(event);
-
-
     }
 
     @FXML
@@ -326,14 +304,11 @@ public class ForInstructor implements Initializable{
 
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        dc = new DbConnection();
+        loadDataFromDatabase(event);
 
-    public static void main(String[] args) {
-        ForInstructor stu1 = new ForInstructor();
-        stu1.readfile();
-        System.out.println("mark : "+stu1.mark());
-        System.out.println("id : "+stu1.getStudentId());
-        System.out.println("name : "+stu1.getStudentName());
-        System.out.println("testName: "+stu1.getTestName());
+
     }
-
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package JavaFinalFx;
+package JavaFinalFx.Util;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +11,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.awt.*;
 import java.io.IOException;
 
 
@@ -36,10 +35,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage window) throws IOException {
-//        root1= FXMLLoader.load(getClass().getResource("userInfo/mainScreen.fxml"));
-        root1= FXMLLoader.load(getClass().getResource("Model/mainScreen.fxml"));
+//        root1= FXMLLoader.load(getClass().getResource("Controller/Model.fxml"));
+        root1= FXMLLoader.load(getClass().getResource("../View/mainScreen.fxml"));
         scene1 = new Scene(root1);
-        window.setTitle("wow");
+        window.setTitle("Cornerstone Student management tool");
         window.setScene(scene1);
         window.show();
 

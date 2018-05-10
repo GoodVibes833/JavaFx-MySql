@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="659.0" prefWidth="1131.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFinalFx.overview.Overview">
+<AnchorPane id="AnchorPane" prefHeight="659.0" prefWidth="1131.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFinalFx.Controller.Overview">
     <children>
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <TableView fx:id="tableUser" layoutX="34.0" layoutY="105.0" prefHeight="463.0" prefWidth="1077.0">
@@ -37,7 +37,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="gragh" layoutX="425.0" layoutY="606.0" mnemonicParsing="false" onAction="#gotoSalaryGragh" prefHeight="27.0" prefWidth="102.0" style="-fx-background-color: #003399;" text="draw gragh" textFill="WHITE" />
-      <Button fx:id="btnLoad1" layoutX="602.0" layoutY="602.0" mnemonicParsing="false" onAction="#resultToTextFile" prefHeight="27.0" prefWidth="121.0" style="-fx-background-color: #003399;" text="Export" textFill="WHITE" />
+      <Button fx:id="gragh" layoutX="383.0" layoutY="596.0" mnemonicParsing="false" onAction="#gotoGragh" prefHeight="40.0" prefWidth="151.0" style="-fx-background-color: #003399;" text="draw gragh" textFill="WHITE" />
+      <Button fx:id="btnLoad1" layoutX="597.0" layoutY="595.0" mnemonicParsing="false" onAction="#resultToTextFile" prefHeight="42.0" prefWidth="147.0" style="-fx-background-color: #003399;" text="Export" textFill="WHITE" />
     </children>
 </AnchorPane>

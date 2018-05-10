@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="799.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFinalFx.userInfo.FXMLUserController">
+<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="799.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFinalFx.Controller.PersonalInfo">
   <children>
     <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
     <TableView fx:id="tableUser" layoutX="230.0" layoutY="62.0" prefHeight="298.0" prefWidth="546.0">
@@ -113,6 +113,5 @@
     <Button fx:id="btnSave" layoutX="175.0" layoutY="381.0" mnemonicParsing="false" onAction="#saveDataFromDatabase" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: #003399;" text="SAVE " textFill="WHITE" />
     <Button fx:id="btnDelete" layoutX="512.0" layoutY="383.0" mnemonicParsing="false" onAction="#deleteDataFromDatabase" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: #003399;" text="DELETE" textFill="WHITE" />
     <Button fx:id="btnUpdate" layoutX="289.0" layoutY="381.0" mnemonicParsing="false" onAction="#updateDataFromDatabase" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: #003399;" text="UPDATE" textFill="WHITE" />
-    <Button fx:id="btnDelete1" layoutX="691.0" layoutY="381.0" mnemonicParsing="false" onAction="#gotoSalaryGragh" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: #003399;" text="GRAGH" textFill="WHITE" />
   </children>
 </AnchorPane>

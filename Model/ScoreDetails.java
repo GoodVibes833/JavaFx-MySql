@@ -1,5 +1,5 @@
 // This class acts as a model class,holding getters,setters and properties
-package JavaFinalFx.forInstructor;
+package JavaFinalFx.Model;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
